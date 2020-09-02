@@ -69,4 +69,26 @@ public class Main {
         }
 
     }
+    public static int maxElement(int arr[]) {
+        int max = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+
+    }
+
+    public static int[] sort(int[] massive) {
+        for (int i = 0; i < massive.length / 2; i++) {
+            int tmp = massive[i];
+            massive[i] = massive[massive.length - i - 1];
+            massive[massive.length - i - 1] = tmp;
+
+    }
+
+
+        return massive;
+    }
 }

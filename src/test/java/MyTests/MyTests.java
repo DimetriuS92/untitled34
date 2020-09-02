@@ -6,6 +6,8 @@ package MyTests;
 import Base.Main;
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
+
 public class MyTests {
     private Main testMain = new Main();
 
@@ -36,11 +38,22 @@ public class MyTests {
     public void testshowDay() throws Exception {
         String day = "tuesday";
         System.out.println(testMain.showDay(day));
-        String day1 = "MoNdAy";
+        String day1 = "sundAy";
         System.out.println(testMain.showDay(day1));
-        String day2 = "Куку";
+        String day2 = "123123";
         System.out.println(testMain.showDay(day2));
         
+    }
+    @Test
+    public void testMaxElement() throws Exception {
+        int arr[] = {1, 206, 10, 2, 3, 0, 7, 56, 32, 3, 14};
+        System.out.println(testMain.maxElement(arr));
+    }
+    @Test
+    public void testReverseArray() throws Exception {
+        int massive[] = {1, 206, 10, 2, 3, 0, 7, 56, 32, 3, 14};
+        System.out.println(Arrays.toString(testMain.sort(massive)));
+
     }
 
 }
