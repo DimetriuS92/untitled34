@@ -69,6 +69,7 @@ public class Main {
         }
 
     }
+
     public static int maxElement(int arr[]) {
         int max = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -86,7 +87,7 @@ public class Main {
             massive[i] = massive[massive.length - i - 1];
             massive[massive.length - i - 1] = tmp;
 
-    }
+        }
 
 
         return massive;
