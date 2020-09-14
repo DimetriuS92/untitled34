@@ -92,4 +92,63 @@ public class Main {
 
         return massive;
     }
+
+    public static int[] twoMax(int[] aray) {
+        int buf;
+        for (int j = 0; j < aray.length; j++) {
+            for (int i = 0; i < aray.length - 1; i++) {
+                if (aray[i] < aray[i + 1]) {
+                    buf = aray[i];
+                    aray[i] = aray[i + 1];
+                    aray[i + 1] = buf;
+                }
+            }
+        }
+
+        int[] arr1 = {0, 0};
+        for (int i = 0; i < 2; i++) {
+            arr1[i] = aray[i];
+        }
+
+        return arr1;
+    }
+
+
+
+    public static int getPopularElement(int[] a) {
+        int count = 1, tempCount;
+        int popular = a[0];
+        int temp;
+        for (int i = 0; i < (a.length - 1); i++)
+        {
+            temp = a[i];
+            tempCount = 0;
+            for (int j = 1; j < a.length; j++)
+            {
+                if (temp == a[j])
+                    tempCount++;
+            }
+            if (tempCount > count)
+            {
+                popular = temp;
+                }
+                count = tempCount;
+            }
+
+        return popular;
+
+    }
+
+    public static int sqrCount(int[] sqr) {
+        int evens = 0;
+        System.out.print("The even numbers in your array are: ");
+        for(int i = 0;i < sqr.length; i++ )
+            if(sqr[i] % 2 == 0)
+                if (sqr[i] % 3 != 0)
+                    evens = sqr[i];
+        return evens;
+    }
+
+
 }
+
